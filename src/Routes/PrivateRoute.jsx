@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useSelector } from "react-redux";
-import { Redirect, Route } from "react-router-dom";
+import { Navigate, Route} from "react-router-dom";
 
 function PrivateRoute({
   children,
@@ -18,7 +18,7 @@ function PrivateRoute({
       )
     </div>
   ) : (
-    <Redirect to={redirectpath} push={push} />
+    <Navigate to={redirectpath} push={push} />
   );
 }
 
