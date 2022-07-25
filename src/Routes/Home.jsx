@@ -4,7 +4,7 @@ import Register from "../components/Register";
 function Home() {
   return (
     <div>
-      <h2 style={{ color: "red" }}>Register Here !!</h2>
+      <h2>Register Here</h2>
       <Register />
     </div>
   );

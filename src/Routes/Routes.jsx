@@ -17,10 +17,6 @@ function Routs() {
           {/* <Info /> */}
         </PrivateRoute>
         <Route path="/login" element={<Login />} />
-
-        <Route>
-          <h3>ERROR 404 PAGE NOT FOUND</h3>
-        </Route>
       </Routes>
     </div>
   );

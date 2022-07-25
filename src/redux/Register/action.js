@@ -15,19 +15,12 @@ export const sucessreq = (payload) => {
   };
 };
 
-export const failurereq = (payload) => {
-  return {
-    type: FAILUARE_REQ,
-    payload,
-  };
-};
-
 export const registeruser = (payload) => (dispatch) => {
   console.log(payload, "after register");
   dispatch(registerreq());
   const requestParam = {
     method: "post",
-    url: "https://masai-api-mocker.herokuapp.com/auth/register",
+    url: "https://reqres.in/api/login",
     header: {
       "Content-Type": "Application/json",
     },
@@ -38,5 +31,5 @@ export const registeruser = (payload) => (dispatch) => {
       (response) => console.log(response),
       dispatch(sucessreq("REGISTER SUCESSSS"))
     )
-    .catch((err) => dispatch(failurereq("Register Failure")));
+    .catch((err) => console.log(err));
 };
