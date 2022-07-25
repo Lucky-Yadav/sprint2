@@ -82,11 +82,11 @@ const Register = () => {
         <label>
           <input
             type="text"
-            placeholder="xxxxx"
+            placeholder="xxx"
             onChange={handelchange}
             value={password}
             name="password"
-            style={{ width: "200px", padding: "8px" }}
+            style={{ width: "250px", padding: "8px" }}
           />
         </label>
         <br />
@@ -106,7 +106,7 @@ const Register = () => {
         <label>
           <input
             type="text"
-            placeholder="99933xxxx"
+            placeholder="948594xxxx"
             onChange={handelchange}
             value={mobile}
             name="mobile"
@@ -132,8 +132,8 @@ const Register = () => {
           style={{
             borderRadius: "10px",
             color: "red",
-            width: "100px",
-            height: "50px",
+            width: "90px",
+            height: "45px",
           }}
         >
           <Link to="/login">REGISTER</Link>

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { FAILUARE_REQ, REGISTER_REQ, SUCCESS_REQ } from "./actiontype";
+import {  REGISTER_REQ, SUCCESS_REQ } from "./actiontype";
 
 export const registerreq = (payload) => {
   return {

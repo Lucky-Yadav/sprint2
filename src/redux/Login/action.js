@@ -2,7 +2,6 @@ import axios from "axios";
 import {
   LOGIN_REQ,
   LOGIN_SUCCESS,
-  LOGIN_FAILURE,
   LOGOUT_PAGE,
 } from "./actiontype";
 
