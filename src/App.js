@@ -1,5 +1,5 @@
 import { Routes } from "./Routes/Routes";
-import "./styles.css";
+import "./App.css";
 
 export default function App() {
   return (
