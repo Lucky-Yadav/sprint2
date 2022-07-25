@@ -1,24 +1,19 @@
 import React, { useContext } from "react";
 import { useSelector } from "react-redux";
-import { Navigate, Route} from "react-router-dom";
+import { Navigate} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-function PrivateRoute({
-  children,
-  path,
-  exact = false,
-  redirectpath = "/login",
-  push = false,
-}) {
+const  PrivateRoute = (exact, children, push) => {
   const isAuth = useSelector((state) => state.login.isAuth);
   return isAuth ? (
     <div>
-      <Route path={path} exact={exact}>
-        {children}
-      </Route>
+      <Routes>
+        <Route path="/path" exact={exact} element={children} />
+      </Routes>
       )
     </div>
   ) : (
-    <Navigate to={redirectpath} push={push} />
+    <Navigate to={"/login"} push={push} />
   );
 }
 

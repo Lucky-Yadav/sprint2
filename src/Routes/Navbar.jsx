@@ -23,14 +23,12 @@ function Navbar() {
         <Titile3>
           <Link
             to={`/`}
-            style={{ color: "red", marginTop: "36px", marginLeft: "30px" }}
           >
             Home
           </Link>
 
           <Link
             to={`/info`}
-            style={{ marginTop: "36px", color: "red", marginLeft: "80px" }}
           >
             Information
           </Link>
@@ -39,7 +37,6 @@ function Navbar() {
         <Titile3>
           <Link
             to={`/login`}
-            style={{ marginLeft: "320%", marginTop: "36px", color: "red" }}
           >
             Login
           </Link>

@@ -1,34 +1,29 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Login from "../components/Login";
 import { Home } from "./Home";
 // import { Info } from "./Info";
 import { Navbar } from "./Navbar";
 import { PrivateRoute } from "./PrivateRoute";
 
-function Routes() {
+function Routs() {
   return (
     <div>
       <Navbar />
 
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
+      <Routes>
+        <Route path="/" element={<Home />} />
         <PrivateRoute exact path="/">
           {/* <Info /> */}
         </PrivateRoute>
-
-        <Route exact path="/login">
-          <Login />
-        </Route>
+        <Route path="/login" element={<Login />} />
 
         <Route>
           <h3>ERROR 404 PAGE NOT FOUND</h3>
         </Route>
-      </Switch>
+      </Routes>
     </div>
   );
 }
 
-export { Routes };
+export { Routs };
