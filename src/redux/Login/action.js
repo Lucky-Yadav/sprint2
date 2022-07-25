@@ -20,13 +20,6 @@ export const sucessLoginreq = (payload) => {
   };
 };
 
-export const failureLoginreq = (payload) => {
-  return {
-    type: LOGIN_FAILURE,
-    payload,
-  };
-};
-
 export const logoutpage = () => {
   return {
     type: LOGOUT_PAGE,
@@ -37,7 +30,7 @@ export const loginruser = (payload) => (dispatch) => {
   dispatch(loginregister());
 
   axios
-    .post(`https://masai-api-mocker.herokuapp.com/auth/login`, payload, {
+    .post(`https://reqres.in/api/login`, payload, {
       headers: {
         "X-Requested-With": "XMLHttpRequest",
       },
@@ -50,5 +43,5 @@ export const loginruser = (payload) => (dispatch) => {
       console.log(response.data.token);
       dispatch(sucessLoginreq(pay));
     })
-    .catch((err) => dispatch(failureLoginreq("LOGIN Failure")));
+    .catch((err) => console.log(err));
 };
