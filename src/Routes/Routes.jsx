@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Login from "../components/Login";
 import { Home } from "./Home";
-import { Info } from "./Info";
+// import { Info } from "./Info";
 import { Navbar } from "./Navbar";
 import { PrivateRoute } from "./PrivateRoute";
 
@@ -15,8 +15,8 @@ function Routes() {
         <Route exact path="/">
           <Home />
         </Route>
-        <PrivateRoute exact path="/info">
-          <Info />
+        <PrivateRoute exact path="/">
+          {/* <Info /> */}
         </PrivateRoute>
 
         <Route exact path="/login">
