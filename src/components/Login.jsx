@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { loginruser } from "../redux/Login/action";
 
 var obj1 = {
@@ -37,7 +37,7 @@ const Login = () => {
   };
 
   if (isAuth) {
-    return <Redirect to="/info" path />;
+    return <Navigate to="/" path />;
   }
 
   return (
