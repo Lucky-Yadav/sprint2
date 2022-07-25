@@ -15,7 +15,6 @@ var obj1 = {
 const Register = () => {
   const dispatch = useDispatch();
   const [data, setData] = useState(obj1);
-
   const { name, email, password, username, mobile, description } = data;
 
   const handelchange = (e) => {
@@ -36,9 +35,6 @@ const Register = () => {
       mobile: mobile,
       description: description,
     };
-
-    console.log(payload);
-
     dispatch(registeruser(payload));
     setData(obj1);
   };
@@ -65,8 +61,6 @@ const Register = () => {
           />
         </label>
         <br />
-        <br />
-
         <label>
           <input
             type="text"
