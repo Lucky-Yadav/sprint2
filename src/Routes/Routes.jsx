@@ -12,9 +12,9 @@ function Routs() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <PrivateRoute exact path="/">
+        {/* <PrivateRoute path="/">
           
-        </PrivateRoute>
+        </PrivateRoute> */}
         <Route path="/login" element={<Login />} />
       </Routes>
     </div>

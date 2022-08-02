@@ -31,12 +31,12 @@ export const loginruser = (payload) => (dispatch) => {
   axios
     .post(`https://reqres.in/api/login`, payload, {
       headers: {
-        "X-Requested-With": "XMLHttpRequest",
+        "Content-Type": "application/json",
       },
     })
     .then((response) => {
       let pay = {
-        token: response.data.token,
+        token: response.token,
         username: payload.username,
       };
       console.log(response.data.token);

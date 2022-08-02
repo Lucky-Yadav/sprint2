@@ -8,7 +8,7 @@ const  PrivateRoute = (exact, children, push) => {
   return isAuth ? (
     <div>
       <Routes>
-        <Route path="/path" exact={exact} element={children} />
+        <Route path="/path"element={children} />
       </Routes>
       )
     </div>
